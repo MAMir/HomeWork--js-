@@ -21,6 +21,12 @@
 			border-image: url(http://dlall.ir/images/main/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
 			box-shadow: 0 0 15px #000;
 		}
+		* {
+			transition:all 2s;
+			-moz-transition:all 2s; /* Firefox 4 */
+			-webkit-transition:all 2s; /* Safari and Chrome */
+			-o-transition:all 2s; /* Opera */
+		}
 	</style>
 </head>
 <body>
@@ -28,6 +34,16 @@
 	<div class="js">
 		<p>salam</p>
 		<script type="text/javascript">
+
+			function edame() {
+				var edame=confirm("in projhe azmayeshi hast, edame midahid?");
+				if (edame==true) {
+					
+				} else {
+					window.close();
+				}
+			}
+			edame();
 
 			document.title="HomeWork";
 			document.bgColor="#81D9E0";
@@ -49,18 +65,32 @@
 			document.write( "<b>" + "che khabar?" + "</b>" +"<br>");
 			document.write("salamati");
 
+			function chbgc() {
+				var change=confirm("aya tamayol ba taghir range background darid?");
+				var whitegreen=confirm("dar soorate tamayol be bgc sbaz ok konid va dar gheyre in soorat bgc sefid khahad bud");
+				if (change==true) {
+					whitegreen();
+				}
+				if(whitegreen==true){
+					window.document.bgColor="#81D9E0";
+				}else {
+					window.document.bgColor=white;
+				}
+			}
+
 		</script>
-
-		<form>
-		  <input type="button" value="close" onClick=window.close() >
-		<form />
-
+		<br/>
+		<br/>
 		<form>
 			<input type="button" value="close this page" onClick=window.close()>
 		</form>
 
 		<form>
 			<input type="button" value="MAMir.ir" onClick=mamir()>
+		</form>
+
+		<form>
+			<input type="button" value="change bgc" onClick=chbgc()>
 		</form>
 
 	</div>
