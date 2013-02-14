@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p {
+			line-height: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<p>salam</p>
+		<script type="text/javascript">
+
+			document.title="HomeWork";
+			document.bgColor="#81D9E0";
+
+			function mamir() {
+				var  win1= window.open("http://www.mamir.ir" ,  " myPage "  , toolbar=1 ,  status=1);
+				win1.alert(" message"); win1.prompt('adad');
+				document.write(win1.closed); //check item morede nazar, true or false.
+			}
+
+			window.name="azmayeshi";
+			var n=window.name;
+			document.write("   /   page name :  " + n + "<br>");
+
+			window.defaultStatus ="Welcom to my WebSite";
+			document.write("salam Ali, khubi?"+"<br>");
+			document.write("mamnun, khubam"+"<hr>");
+			document.write( "<b>" + "che khabar?" + "</b>" +"<br>");
+			document.write("salamati");
+		</script>
+		<form>
+		  <input type="button" value="close" onClick=window.close() >
+		<form />
+		<form>
+			<input type="button" value="close this page" onClick=window.close()>
+		</form>
+		<form>
+			<input type="button" value="MAMir.ir" onClick=mamir()>
+		</form>
+	</div>
+
+</body>
+</html>
