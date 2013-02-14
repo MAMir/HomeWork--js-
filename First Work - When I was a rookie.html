@@ -5,11 +5,27 @@
 		p {
 			line-height: 20px;
 		}
+		.js {
+			width: 500px;
+			height: 500px;
+			padding: 10px;
+
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: auto;
+
+			border: 20px solid #999;
+			border-image: url(http://dlall.ir/images/main/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
+			box-shadow: 0 0 15px #000;
+		}
 	</style>
 </head>
 <body>
 
-	<div>
+	<div class="js">
 		<p>salam</p>
 		<script type="text/javascript">
 
@@ -22,25 +38,31 @@
 				document.write(win1.closed); //check item morede nazar, true or false.
 			}
 
-			window.name="azmayeshi";
+			window.name="azmayeshi"; // window.name, hich ja namayesh dade nemishe.
 			var n=window.name;
 			document.write("   /   page name :  " + n + "<br>");
 
-			window.defaultStatus ="Welcom to my WebSite";
-			document.write("salam Ali, khubi?"+"<br>");
+			window.defaultStatus ="Welcom to my WebSite"; // un ghadima... ie6,7 paein morurgar
+
+			document.write("salam Ali, khubi?"+"<br>"); // test tag hay html
 			document.write("mamnun, khubam"+"<hr>");
 			document.write( "<b>" + "che khabar?" + "</b>" +"<br>");
 			document.write("salamati");
+
 		</script>
+
 		<form>
 		  <input type="button" value="close" onClick=window.close() >
 		<form />
+
 		<form>
 			<input type="button" value="close this page" onClick=window.close()>
 		</form>
+
 		<form>
 			<input type="button" value="MAMir.ir" onClick=mamir()>
 		</form>
+
 	</div>
 
 </body>
