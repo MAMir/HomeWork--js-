@@ -18,7 +18,7 @@
 			margin: auto;
 
 			border: 20px solid #999;
-			border-image: url(http://dlall.ir/images/main/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
+			border-image: url(http://dlall.ir/images/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
 			box-shadow: 0 0 15px #000;
 		}
 		* {
@@ -60,13 +60,13 @@
 
 			window.defaultStatus ="Welcom to my WebSite"; // un ghadima... ie6,7 paein morurgar
 
-			document.write("salam Ali, khubi?"+"<br>"); // test tag hay html
-			document.write("mamnun, khubam"+"<hr>");
-			document.write( "<b>" + "che khabar?" + "</b>" +"<br>");
-			document.write("salamati");
+			document.write("text, azmayeshi?"+"<br>"); // test tag hay html
+			document.write("text, azmayeshi"+"<hr>");
+			document.write( "<b>" + "azmayeshi?" + "</b>" +"<br>");
+			document.write("text");
 
 			function chbgc() {
-				var change=confirm("aya tamayol ba taghir range background darid?");
+				var change=confirm("aya tamayol be taghir range background darid?");
 				var whitegreen=confirm("dar soorate tamayol be bgc sbaz ok konid va dar gheyre in soorat bgc sefid khahad bud");
 				if (change==true) {
 					whitegreen();
@@ -78,6 +78,15 @@
 				}
 			}
 
+			function changebcg() {
+				var change2=confirm("aya tamayol be taghir range background darid?");
+				if (change2==true) {
+					window.document.bgColor="white";
+				}else {
+					window.document.bgColor="green";
+				}
+			}
+			
 		</script>
 		<br/>
 		<br/>
@@ -90,7 +99,10 @@
 		</form>
 
 		<form>
-			<input type="button" value="change bgc" onClick=chbgc()>
+			<input type="button" value="change bgc" onClick=changebcg()>
+			<br>
+			<br>
+			<input class="text" type="text" maxlength="3" value="1" name="t1">
 		</form>
 
 	</div>
