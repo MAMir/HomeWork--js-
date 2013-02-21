@@ -27,12 +27,21 @@
 			-webkit-transition:all 2s; /* Safari and Chrome */
 			-o-transition:all 2s; /* Opera */
 		}
+		.option {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			width: 511px;
+		}
+		form {
+			float: right;
+		}
 	</style>
 </head>
 <body>
 
 	<div class="js">
-		<p>salam</p>
+		<h1 align="center">salam</h1>
 		<script type="text/javascript">
 
 			function edame() {
@@ -56,7 +65,7 @@
 
 			window.name="azmayeshi"; // window.name, hich ja namayesh dade nemishe.
 			var n=window.name;
-			document.write("   /   page name :  " + n + "<br>");
+			document.write("<center>" + "<h3>" + "   /   page name :  " + n + "</h3>" + "</center>" + "<br>");
 
 			window.defaultStatus ="Welcom to my WebSite"; // un ghadima... ie6,7 paein morurgar
 
@@ -90,21 +99,20 @@
 		</script>
 		<br/>
 		<br/>
-		<form>
-			<input type="button" value="close this page" onClick=window.close()>
-		</form>
+		<div class="option" >
+			<p style=" line-height:5px "	>Option :</p>
+			<form>
+				<input type="button" value="MAMir.ir" onClick=mamir()>
+			</form>
 
-		<form>
-			<input type="button" value="MAMir.ir" onClick=mamir()>
-		</form>
+			<form>
+				<input type="button" value="change bgc" onClick=changebcg()>
+			</form>
 
-		<form>
-			<input type="button" value="change bgc" onClick=changebcg()>
-			<br>
-			<br>
-			<input class="text" type="text" maxlength="3" value="1" name="t1">
-		</form>
-
+			<form>
+				<input type="button" value="close this page" onClick=window.close()>
+			</form>
+		</div>
 	</div>
 
 </body>
