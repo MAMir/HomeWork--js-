@@ -87,14 +87,27 @@
 				}
 			}
 
-			function changebcg() {
-				var change2=confirm("aya tamayol be taghir range background darid?");
+			function changebgc() {
+				var change2=confirm("aya tamayol be taghir range background be sefid ra darid?");
 				if (change2==true) {
 					window.document.bgColor="white";
 				}else {
-					window.document.bgColor="green";
+					window.document.bgColor="#81D9E0";
 				}
 			}
+
+			function Choicebgc() {
+				var entekhab=prompt("please enter  R  or  B  or  Y  or  M to change bgc")
+				switch (entekhab) {
+					case "R": window.document.bgColor="red"; break
+					case "B": window.document.bgColor="blue"; break
+					case "Y": window.document.bgColor="yellow"; break
+					case "M": window.document.bgColor="Magenta"; break
+					default: window.document.bgColor="#81D9E0";
+				} 
+			}
+			
+ 			document.write("<p>"+ new Date() +"<p>");
 			
 		</script>
 		<br/>
@@ -106,11 +119,14 @@
 			</form>
 
 			<form>
-				<input type="button" value="change bgc" onClick=changebcg()>
+				<input type="button" value="change bgc" onClick=changebgc()>
 			</form>
 
 			<form>
 				<input type="button" value="close this page" onClick=window.close()>
+			</form>
+			<form>
+				<input type="button" value="Choice Bgc" onClick=Choicebgc()>
 			</form>
 		</div>
 	</div>
