@@ -108,18 +108,23 @@
 			}
 			
  			document.write("<p>"+ new Date() +"<p>");
+			
+			// test set time in -js-
 
- 			function sorat() {
- 				var pm=confirm("dar soorate tamayol be taghir bgc be noghrei ta 5 sanie forsat darid in payam ra taeid konid");
- 				
- 				if (pm==true) {
- 					window.document.bgColor="silver";
- 					setTimeout("pm() " ,10000);
- 				} else {
- 					window.document.bgColor="#81D9E0";
- 				}
+			function pm() {
+				alert("anjam nashod");
+			}
+			var s;
+			function stime() {
+				s=setTimeout("pm()" , 5000);
+			}
+			function ctime() {
+				clearTimeout( s );
+				document.bgColor="silver";
+				alert("shoma ba movafaghiat range bgc ra taghir dadid");
+			}
+			stime();
 
- 			}
 			
 		</script>
 		<br/>
@@ -144,26 +149,9 @@
 				<input type="button" value="Color" onClick=cTimer()>
 			</form>
 			<form>
-				<input type="button" value="Sorat" onClick=sorat()>
+				<input type="button" value="Sorat" onClick=ctime()>
 			</form>
 		</div>
-
-		<script>
- function a() {  alert("sorry, dont changes")
-}
- var s;
- function sTime()  {  
- 	s=setTimeout("a() " ,10000);
-}
-
-function cTimer () {
-		clearTimeout( s );
- 		document.bgColor="silver";
-		alert(" Your request do and change Background color");
-  					}
-  					sTime() ;
-
-		</script>
 
 
 
