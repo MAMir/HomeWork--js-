@@ -108,6 +108,18 @@
 			}
 			
  			document.write("<p>"+ new Date() +"<p>");
+
+ 			function sorat() {
+ 				var pm=confirm("dar soorate tamayol be taghir bgc be noghrei ta 5 sanie forsat darid in payam ra taeid konid");
+ 				
+ 				if (pm==true) {
+ 					window.document.bgColor="silver";
+ 					setTimeout("pm() " ,10000);
+ 				} else {
+ 					window.document.bgColor="#81D9E0";
+ 				}
+
+ 			}
 			
 		</script>
 		<br/>
@@ -128,7 +140,36 @@
 			<form>
 				<input type="button" value="Choice Bgc" onClick=Choicebgc()>
 			</form>
+			<form>
+				<input type="button" value="Color" onClick=cTimer()>
+			</form>
+			<form>
+				<input type="button" value="Sorat" onClick=sorat()>
+			</form>
 		</div>
+
+		<script>
+ function a() {  alert("sorry, dont changes")
+}
+ var s;
+ function sTime()  {  
+ 	s=setTimeout("a() " ,10000);
+}
+
+function cTimer () {
+		clearTimeout( s );
+ 		document.bgColor="silver";
+		alert(" Your request do and change Background color");
+  					}
+  					sTime() ;
+
+		</script>
+
+
+
+
+
+
 	</div>
 
 </body>
