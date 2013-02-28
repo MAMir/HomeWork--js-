@@ -7,7 +7,7 @@
 		}
 		.js {
 			width: 500px;
-			height: 500px;
+			height: auto;
 			padding: 10px;
 
 			position: absolute;
@@ -33,7 +33,7 @@
 			right: 0px;
 			width: 511px;
 		}
-		form {
+		.option-f {
 			float: right;
 		}
 	</style>
@@ -42,6 +42,36 @@
 
 	<div class="js">
 		<h1 align="center">salam</h1>
+		
+		<div class="color-text">
+		<p>
+			serfan jahate azmayesh :D
+			<br>
+			<a href="http://google.com">Searchhhhh...</a>
+		</p>
+		<form name="form1" >
+			please select one color :
+			<br>
+			<select name="colorlist" size=1>
+				<option> Red </option>
+			 	<option> Royalblue </option>
+				<option> violet </option>
+				<option> Pink </option>
+				<option> Yellow </option>
+				<option> Gold </option>
+				<option> silver </option>
+			</select>
+		</form>
+		<br>
+  		<input   type="radio"   value="bgc"     name="Fradio"   checked>Background</input>
+  		<input   type="radio"   value="fgc"         name="Fradio" > Forecolor</input>
+  		<input   type="radio"    value="linkc"       name="Fradio" > Linkcolor</input>
+  		<input    type="radio"    value="alinkc"    name="Fradio" > Alinkcolor</input>
+  		<input    type="radio"     value="vlinkc"   name="Fradio" > Vlinkcolor</input>
+  		<input     type="button"   value="Apply"   name="app"      onclick=colors() />
+  		</div>
+  		<br>
+
 		<script type="text/javascript">
 
 			function edame() {
@@ -112,7 +142,7 @@
 			// test set time in -js-
 
 			function pm() {
-				alert("anjam nashod");
+				alert("taghir bgc anjam nashod");
 			}
 			var s;
 			function stime() {
@@ -131,34 +161,27 @@
 		<br/>
 		<div class="option" >
 			<p style=" line-height:5px "	>Option :</p>
-			<form>
+			<form class="option-f">
 				<input type="button" value="MAMir.ir" onClick=mamir()>
 			</form>
 
-			<form>
+			<form class="option-f">
 				<input type="button" value="change bgc" onClick=changebgc()>
 			</form>
 
-			<form>
+			<form class="option-f">
 				<input type="button" value="close this page" onClick=window.close()>
 			</form>
-			<form>
+			<form class="option-f">
 				<input type="button" value="Choice Bgc" onClick=Choicebgc()>
 			</form>
-			<form>
+			<form class="option-f">
 				<input type="button" value="Color" onClick=cTimer()>
 			</form>
-			<form>
+			<form class="option-f">
 				<input type="button" value="Sorat" onClick=ctime()>
 			</form>
 		</div>
-
-
-
-
-
-
 	</div>
-
 </body>
 </html>
