@@ -36,6 +36,13 @@
 		.option-f {
 			float: right;
 		}
+		.color-text {
+			padding: 5px;
+
+			border: 5px solid #999;
+			border-image: url(http://dlall.ir/images/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
+			box-shadow: 0 0 5px #000;
+		}
 	</style>
 </head>
 <body>
@@ -45,11 +52,11 @@
 		
 		<div class="color-text">
 		<p>
-			serfan jahate azmayesh :D
+			test contorol taghir range tag p va a
 			<br>
-			<a href="http://google.com">Searchhhhh...</a>
+			<a href="http://google.com">Link nemune</a>
 		</p>
-		<form name="form1" >
+		<form name="form-co" >
 			please select one color :
 			<br>
 			<select name="colorlist" size=1>
@@ -62,14 +69,37 @@
 				<option> silver </option>
 			</select>
 		</form>
-		<br>
-  		<input   type="radio"   value="bgc"     name="Fradio"   checked>Background</input>
-  		<input   type="radio"   value="fgc"         name="Fradio" > Forecolor</input>
-  		<input   type="radio"    value="linkc"       name="Fradio" > Linkcolor</input>
-  		<input    type="radio"    value="alinkc"    name="Fradio" > Alinkcolor</input>
-  		<input    type="radio"     value="vlinkc"   name="Fradio" > Vlinkcolor</input>
-  		<input     type="button"   value="Apply"   name="app"      onclick=colors() />
+
+  			<input   type="radio"   value="bgc"     name="co-radio"   checked>Background</input>
+  			<input   type="radio"   value="fgc"         name="co-radio" >color</input>
+  			<input   type="radio"    value="link"       name="co-radio" > Link color</input>
+  			<input    type="radio"    value="alink"    name="co-radio" > Alink color</input>
+  			<input    type="radio"     value="vlink"   name="co-radio" > Vlink color</input>
+  			<input     type="button"   value="Apply"   name="apply"      onclick=colors() />
+
+		<script type="text/javascript">
+		   
+		   function colors() {
+		   	var co=document.form-co.colorlist.option
+		   	[document.form-co.colorlist.selectedIndex.text];
+
+			if (document.form-co.co-radio[0].checked) {
+				document.bgColor=co;
+			}else if (document.form-co.co-radio[1].checked) {
+				document.bgColor=co;
+			}
+
+
+		   }
+
+
+
+
+
+		</script>
+
   		</div>
+  		
   		<br>
 
 		<script type="text/javascript">
