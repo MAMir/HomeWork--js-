@@ -43,67 +43,15 @@
 			border-image: url(http://dlall.ir/images/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
 			box-shadow: 0 0 5px #000;
 		}
+		.color-text a {
+			text-decoration: none;
+			color: #000;
+		}
 	</style>
 </head>
 <body>
 
-	<div class="js">
-		<h1 align="center">salam</h1>
-		
-		<div class="color-text">
-		<p>
-			test contorol taghir range tag p va a
-			<br>
-			<a href="http://google.com">Link nemune</a>
-		</p>
-		<form name="form-co" >
-			please select one color :
-			<br>
-			<select name="colorlist" size=1>
-				<option> Red </option>
-			 	<option> Royalblue </option>
-				<option> violet </option>
-				<option> Pink </option>
-				<option> Yellow </option>
-				<option> Gold </option>
-				<option> silver </option>
-			</select>
-		</form>
-
-  			<input   type="radio"   value="bgc"     name="co-radio"   checked>Background</input>
-  			<input   type="radio"   value="fgc"         name="co-radio" >color</input>
-  			<input   type="radio"    value="link"       name="co-radio" > Link color</input>
-  			<input    type="radio"    value="alink"    name="co-radio" > Alink color</input>
-  			<input    type="radio"     value="vlink"   name="co-radio" > Vlink color</input>
-  			<input     type="button"   value="Apply"   name="apply"      onclick=colors() />
-
-		<script type="text/javascript">
-		   
-		   function colors() {
-		   	var co=document.form-co.colorlist.option
-		   	[document.form-co.colorlist.selectedIndex.text];
-
-			if (document.form-co.co-radio[0].checked) {
-				document.bgColor=co;
-			}else if (document.form-co.co-radio[1].checked) {
-				document.bgColor=co;
-			}
-
-
-		   }
-
-
-
-
-
-		</script>
-
-  		</div>
-  		
-  		<br>
-
-		<script type="text/javascript">
-
+	<script type="text/javascript">
 			function edame() {
 				var edame=confirm("in projhe azmayeshi hast, edame midahid?");
 				if (edame==true) {
@@ -113,6 +61,60 @@
 				}
 			}
 			edame();
+	</script>
+
+	<div class="js">
+		<h1 align="center">salam</h1>
+		
+		<!--option color for bg va text va link-->
+		<div class="color-text">
+		<p>
+			test contorol taghir range bg va tag p va a
+			<br>
+			<a target="_blank" href="http://google.com">Link nemune</a>
+		</p>
+		<form name="form1" >
+			please select one color :
+			<br>
+			<select name="colorlist" size=1>
+				<option> Red </option>
+			 	<option> Blue </option>
+				<option> Black </option>
+				<option> Pink </option>
+				<option> Yellow </option>
+				<option> #81D9E0 </option>
+				<option> silver </option>
+			</select>
+			<br>
+
+  			<input   type="radio"   value="bgc"     name="Cradio"   checked>Background</input>
+  			<input   type="radio"   value="fgc"         name="Cradio" >color</input>
+  			<input   type="radio"    value="link"       name="Cradio" > Link color</input>
+  			<input     type="button"   value="Apply"   name="app"      onclick="colors()" />
+
+  			</form>
+
+		<script type="text/javascript">
+		   
+		   function colors() {
+		   	var c=document.form1.colorlist.options
+			[document.form1.colorlist.selectedIndex].text;
+		   		
+			if (document.form1.Cradio[0].checked) {
+				document.bgColor=c;
+			}else if (document.form1.Cradio[1].checked) {
+				document.fgColor=c;
+			}else if (document.form1.Cradio[2].checked) {
+				document.linkColor=c;
+			}
+		   }
+		</script>
+
+  		</div>
+  		
+  		<br>
+
+		<script type="text/javascript">
 
 			document.title="HomeWork";
 			document.bgColor="#81D9E0";
@@ -204,9 +206,6 @@
 			</form>
 			<form class="option-f">
 				<input type="button" value="Choice Bgc" onClick=Choicebgc()>
-			</form>
-			<form class="option-f">
-				<input type="button" value="Color" onClick=cTimer()>
 			</form>
 			<form class="option-f">
 				<input type="button" value="Sorat" onClick=ctime()>
