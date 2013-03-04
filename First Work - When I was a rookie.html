@@ -203,7 +203,7 @@
 		<!--form register-->
 		<p>Register Form</p>
 		<div class="formreg">
-		<form name="regf" onSubmit="return checkform(this)">
+		<form name="regf" onSubmit="return chform()">
 			Your Name:
 			<input type="text" name="name">
 			<br>
@@ -216,6 +216,23 @@
 			<input type="reset" value="clean">
 			<input type="submit" value="register">
 		</form>
+		<script type="text/javascript" charset="utf-8">
+		function chform() {
+			var lform=document.regf.elements;
+			var chformt=true;
+			for (i=0, i<lform.length, i++) {
+				if(document.regf.elements[i].value==""){
+					chformt=false;
+					alert("lotfan file " + document.regf.elements[i].name + " ra por konid" + "\n" + "in fild zaruri ast.");
+					break;
+				}
+			}
+			return chformt;
+		}
+
+
+
+		</script>
 		</div>
 
 
