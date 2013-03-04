@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.formreg {
+			padding: 5px;
+
+			border: 5px solid #999;
+			border-image: url(http://dlall.ir/images/border-image-20x20.jpg) 20 20 20 20 stretch stretch;
+			box-shadow: 0 0 5px #000;
+		}
+	</style>
+</head>
+<body>
+		<!--form register-->
+		<p>Register Form</p>
+		<div class="formreg">
+		<form name="regf" onSubmit="return chform()"> <!-- checform(form1) or checform() or checform(this)-->
+			Your Name:
+			<input type="text" name="name">
+			<br>
+			Your Mail:
+			<input type="text" name="mail">
+			<br>
+			Your Tell:
+			<input type="tet" name="tell">
+			<br>
+			<input type="reset" value="clean">
+			<input type="submit" value="register">
+		</form>
+		<script type="text/javascript" charset="utf-8">
+		function chform() {
+			var lform=document.regf.elements;
+			var ch=true;
+			for (i=0; i<lform.length; i++) {
+				if(document.regf.elements[i].value==""){
+					ch=false;
+					alert("lotfan khane: " + ">>> " + document.regf.elements[i].name + " <<<" + " ra por konid" + "\n" + "in ghesmat zaruri ast.");
+					break;
+				}
+			}
+			return ch;
+		}
+		</script>
+		</div>
+</body>
+</html>
