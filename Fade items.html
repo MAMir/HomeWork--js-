@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/agodup/2/edit
+-->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<style id="jsbin-css">
+		.box img {
+			float: left;
+			margin-right: 4px;
+		}
+</style>
+</head>
+<body>
+  
+  <div class="box">
+  
+    <img class="a" src="http://deathempires.org/s1/images/g1.png" border="0"/>
+  	<img class="b" src="http://deathempires.org/s1/images/g2.png" border="0"/>
+  	<img class="c" src="http://deathempires.org/s1/images/g3.png" border="0"/>
+  	<img class="d" src="http://deathempires.org/s1/images/g4.png" border="0"/>
+  	<img class="e" src="http://deathempires.org/s1/images/g5.png" border="0"/>
+    <img class="f" src="http://deathempires.org/s1/images/g6.png" border="0"/>
+    <img class="g" src="http://deathempires.org/s1/images/g7.png" border="0"/>
+    
+  </div>
+  
+<script>
+
+
+$(document).ready(function(){
+  
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+
+});
+
+$('body').css (
+  {
+  background:"black"
+  }
+              );
+
+setInterval(function(){
+  $('.box .a, .b').css(
+    {
+      "-webkit-transition" : "all 2000ms",
+      "opacity":"0.1"
+    }
+  );
+                      },5000
+           );
+
+setInterval(function(){
+  $('.box .a, .b').css(
+    {
+      "-webkit-transition" : "all 2000ms",
+      "opacity":"1"
+    }
+  );
+                      },6000
+           );
+</script>
+</body>
+</html>
