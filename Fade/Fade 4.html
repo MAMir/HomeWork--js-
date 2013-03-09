@@ -2,7 +2,7 @@
 <html>
 <!--
   Created using jsbin.com
-  Source can be edited via http://jsbin.com/acukox/6/edit
+  Source can be edited via http://jsbin.com/acukox/7/edit
 -->
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -46,11 +46,45 @@ $(".box .f").fadeIn(13000);
 $(".box .g").fadeIn(14000);  
 }
 
-setInterval(function(){
+test=setInterval(function(){
 salam();
-},15000
+},5000
            );
   
+
+$('.box').mouseover(function(){
+  clearInterval(test);
+});
+
+$('.box').mouseout(function(){
+  test=setInterval(function(){
+salam();
+},5000
+           );
+});
+
+$(".box .a, .b, .c, .d, .e, .f, .g").mouseover(function(){
+          $(this).css({
+            "transition":"all 1s",
+			"-moz-transition":"all 1s",
+			"-webkit-transition":"all 1s",
+			"-o-transition":"all 1s",
+            "width":"130px",
+            "height":"130px"
+});
+   });
+
+$('.box .a, .b, .c, .d, .e, .f, .g').mouseout(function(){
+          $(this).css({
+            "transition":"all 1s",
+			"-moz-transition":"all 1s",
+			"-webkit-transition":"all 1s",
+			"-o-transition":"all 1s",
+            "width":"125px",
+            "height":"123px",
+            "z-index":"5"
+});
+   });
 </script>
 </body>
 </html>
