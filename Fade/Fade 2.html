@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/agodup/6/edit
+-->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<style id="jsbin-css">
+		.box img {
+			float: left;
+			margin-right: 4px;
+		}
+</style>
+</head>
+<body>
+  
+  <div class="box">
+  
+	<img class="a" src="http://deathempires.org/s1/images/g1.png" border="0"/>
+  	<img class="b" src="http://deathempires.org/s1/images/g2.png" border="0"/>
+  	<img class="c" src="http://deathempires.org/s1/images/g3.png" border="0"/>
+  	<img class="d" src="http://deathempires.org/s1/images/g4.png" border="0"/>
+  	<img class="e" src="http://deathempires.org/s1/images/g5.png" border="0"/>
+  	<img class="f" src="http://deathempires.org/s1/images/g6.png" border="0"/>
+  	<img class="g" src="http://deathempires.org/s1/images/g7.png" border="0"/>
+    
+  </div>
+  
+<script>
+$(function(){
+  
+var n=10,
+    op=true;
+
+$('body').css (
+  {
+  background:"black"
+  });
+
+changeOp = function(){
+  console.log(op);
+  console.log(n);
+  if(op) {
+   $('.box > img').css(
+     {
+       "-webkit-transition" : "all 3000ms",
+       "opacity":"0.1"
+     });
+    op=false;
+  }
+  else {
+   $('.box > img').css(
+     {
+       "opacity":"1"
+     });
+    op=true;
+    n--;
+  }
+  if(!n){
+    clearInterval(timer);
+  }
+};
+
+timer=setInterval(changeOp,3000);
+
+});
+</script>
+</body>
+</html>
