@@ -5,65 +5,65 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-.tab {
-  width: 200px;
-  height: 200px;
-  display: none;
-}
+      .tab {
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
 
-#tab-anchors {
-  margin-bottom: 4px;
-}
+      #tab-anchors {
+        margin-bottom: 4px;
+      }
 
-.tab-anchor {
-  background-color: #ccc;
-  padding: 5px;
-  border: 1px solid #aaa;
-  border-bottom: none;
-}
+      .tab-anchor {
+        background-color: #ccc;
+        padding: 5px;
+        border: 1px solid #aaa;
+        border-bottom: none;
+      }
 
-.selected-tab {
-  background-color: #eee;
-}
+      .selected-tab {
+        background-color: #eee;
+      }
 
-#tab-1 {
-  background-color: #D480FF;
-  display: block;
-}
+      #tab-1 {
+        background-color: #D480FF;
+        display: block;
+      }
 
-#tab-2 {
-  background-color: #809FFF;
-}
+      #tab-2 {
+        background-color: #809FFF;
+      }
 
-#tab-3 {
-  background-color: #FF7C5C;
-}
+      #tab-3 {
+        background-color: #FF7C5C;
+      }
 	</style>
 </head>
 <body>
 
 
-<div id="tab-anchors">
-  <a id="tab-anchor-1" class="tab-anchor selected-tab" href="javascript:ShowTab(1);">
-    Tab 1
-  </a>
-  <a id="tab-anchor-2" class="tab-anchor" href="javascript:ShowTab(2);">Tab 2</a>
-  <a id="tab-anchor-3" class="tab-anchor" href="javascript:ShowTab(3);">Tab 3</a>
-</div>
-<div id="tab-1" class="tab">This is tab one!</div>
-<div id="tab-2" class="tab">This is tab two!</div>
-<div id="tab-3" class="tab">This is tab three!</div>
+  <div id="tab-anchors">
+    <a id="tab-anchor-1" class="tab-anchor selected-tab" href="javascript:ShowTab(1);">
+      Tab 1
+    </a>
+    <a id="tab-anchor-2" class="tab-anchor" href="javascript:ShowTab(2);">Tab 2</a>
+    <a id="tab-anchor-3" class="tab-anchor" href="javascript:ShowTab(3);">Tab 3</a>
+  </div>
+  <div id="tab-1" class="tab">This is tab one!</div>
+  <div id="tab-2" class="tab">This is tab two!</div>
+  <div id="tab-3" class="tab">This is tab three!</div>
 
-<script type="text/javascript">
-function ShowTab(num)
-{
-  $('#tab-anchors a').removeClass('selected-tab');
-  $('#tab-anchor-' + num).addClass('selected-tab');
+    <script type="text/javascript">
+      function ShowTab(num)
+      {
+        $('#tab-anchors a').removeClass('selected-tab');
+        $('#tab-anchor-' + num).addClass('selected-tab');
 
-  $('.tab').hide();
-  $('#tab-' + num).show();
-}
-</script>
+        $('.tab').hide();
+        $('#tab-' + num).show();
+      }
+    </script>
 
 </body>
 </html>
