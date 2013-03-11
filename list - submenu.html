@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>دسته ها</title>
+
+	<style>
+		#JQTreeview
+		{
+		  border: 1px solid #11B700;
+		  padding: 5px;
+		}
+
+		.expandNode
+		{
+		  cursor: pointer;
+		  width: 16px;
+		  height: 16px;
+		  background-color: #000;
+		  float: left;
+		  margin-right: 8px;
+		}
+
+		.expand
+		{
+		  background: url(http://www.switchonthecode.com/sites/default/files/707/images/expandIcon.png) no-repeat;
+		}
+
+		.collapse
+		{
+		  background: url(http://www.switchonthecode.com/sites/default/files/707/images/collapseIcon.png) no-repeat;
+		}
+
+		.NodeContents
+		{
+		  border-left: 6px solid #D2FFCC;
+		  margin-left: 4px;
+		  display: none;
+		  padding-left: 5px;
+		}
+
+		span.ItemTitle
+		{
+		  font-size: 10px;
+		  width: 100px;
+		  text-decoration: underline;
+		}
+
+		div.NodeItem div.ItemTxt
+		{
+		  font-size: 14px;
+		  padding: 2px 5px;
+		  margin-bottom: 2px;
+		  text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="JQTreeview">
+	</div>
+  
+	<script type="text/javascript">
+
+		treeview = function(tData, container)
+		{
+		  this.build = function(nodeInfo)
+		  {
+		    var nodeID = nodeInfo['title'].replace(/\s/g, "_");
+		    var node = $('<div id="'+nodeID+'-Node">'+nodeInfo['title']+'</div>')
+		      .css({'margin-top': 5});
+		    
+		    $('<div class="expandNode expand"></div>')
+		      .prependTo(node);
+		        
+		    var contents = $('<div class="NodeContents"></div>');
+		    
+		    for(item in nodeInfo['items'])
+		    {
+		      if(typeof nodeInfo['items'][item] == 'string' ||
+		         typeof nodeInfo['items'][item] == 'number')
+		      {
+		        $('<div class="NodeItem"></div>')
+		          .html('<span class="ItemTitle">'+item+'</span><div class="ItemTxt">'+nodeInfo['items'][item]+'</div>')
+		          .appendTo(contents);
+		      }
+		      if(typeof nodeInfo['items'][item] == 'object')
+		      {
+		        sNode = this.build(nodeInfo['items'][item]);
+		        contents.append(sNode);
+		      }
+		    }
+		    
+		    node.append(contents);
+		    
+		    node.children('.expandNode').click(function() {
+		      var contents = $(this).parent().children(".NodeContents");
+		      contents.toggle();
+		      if(contents.css('display') != "none")
+		      {
+		        $(this).attr("class", "expandNode collapse");
+		      }
+		      else
+		      {
+		        $(this).attr("class", "expandNode expand");
+		      }
+		      
+		    });
+		    
+		    return node;
+		  }
+		  
+		  this.tree = this.build(tData);
+		  var treeCon = container;
+		  
+		  treeCon.append(this.tree);
+		}
+
+		$(document).ready(function() {
+		         
+		  var data = {
+		  'title': "نمونه برای دسته ها",
+		  'items': {
+		    "تست 1": "متن نمونه",
+		    "تست 2": "متن آزمایشی",
+		    "تست 3": "متن تست",
+		    "تست 4": {
+		      'title': "زیر مجموعه تست 3",
+		      'items': {
+		        "نمونه تست 1": "متن آزمایشی",
+		        "نمونه تست 2": "متن آزمایشی",
+		        "نمونه تست 3": "متن آزمایشی"
+		      }
+		    }
+		  }
+		  };
+		  
+		  tView = new treeview(data, $('#JQTreeview'));
+		});
+
+	</script>
+
+
+
+</body>
+</html>
