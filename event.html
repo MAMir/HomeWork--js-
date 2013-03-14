@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+
+	<form name="fun">
+		<input type="button" name="p1" value="button1"	onClick="fun1()" />
+		<input type="button" name="p2" value="button2"	onClick="fun2()" />
+	</form>
+
+	<script type="text/javascript">
+		function fun1 () {
+			document.fun.p2.click();
+		}
+		function fun2 () {
+			alert("salam");
+		}
+
+	</script>
+</body>
+</html>

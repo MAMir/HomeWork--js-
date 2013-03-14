@@ -7,7 +7,36 @@
 
 	</style>
 </head>
-<body>
+<body onload="setIn()">
+
+	<form name="form2">
+	<textarea rows=5 cols=50 name="t2" >text11111111111111111111111</textarea>
+	</form>
+
+	<script type="text/javascript">
+		var y=0
+		var A=new Array(4);
+		A[0]="text11111111111111111111111"
+		A[1]="text2222222222222222222"
+		A[2]="text33333333333333333"
+		A[3]="text444444444444444"
+			function setIn() {
+				window.setInterval("changeText()", 5000)
+			}
+
+			function changeText() {
+				++y
+				if (y==4) {
+					y=0
+				}
+				document.form2.t2.value=A[y];
+			}
+	</script>
+
+	<br>
+	<br>
+	<br>
+
 
 	<script type="text/javascript">
 		var sen=new Array(3);
