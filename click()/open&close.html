@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/opolep/2/edit
+-->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<style id="jsbin-css">
+.js-sh-h {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  
+  transition: all 2s;
+  -moz-transition: all 2s;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  
+}
+.js-sh-h, .sh-h p {
+  text-align: center;
+}
+.sh-h {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 1px solid;
+}
+</style>
+</head>
+<body>
+  
+  <div class="js-sh-h">
+  
+    <p class="js-sh-h-p">inja click konid</p>
+    
+    
+  <div class="sh-h">
+    <p>shomare hesab</p>
+    
+    <p class="js-cl">close</p>
+    
+  </div>
+  
+  </div>
+  
+<script>
+$('.js-sh-h-p').click(function(){
+  
+  $(".sh-h").show(1000);
+  
+});
+
+$('.js-cl').click(function(){
+                            
+	$(".sh-h").hide(1000);
+                                
+  
+});
+</script>
+</body>
+</html>
