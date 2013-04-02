@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/opolep/8/edit
+-->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<style id="jsbin-css">
+.js-sh-h {
+  width: 350px;
+  height: 300px;
+}
+
+.js-sh-h {
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 14px;
+  direction: rtl;
+}
+
+.js-sh-h-p, .js-cl {
+  cursor:pointer
+}
+
+.sh-h {
+  display: none;
+  width: 300px;
+  height: 160px;
+  margin: auto;
+  border: 5px groove rgb(178, 173, 160);
+  background-color: rgb(214, 208, 192);
+}
+
+.js-cl {
+  text-align: left;
+  font-size: 12px;
+  margin-left: 3px;
+}
+</style>
+</head>
+<body>
+  
+  <div class="js-sh-h">
+  
+    <p class="js-sh-h-p">
+      شماره حساب و شماره کارت را اینجا ببینید.
+    </p>
+    
+    
+  <div class="sh-h">
+    <p>شماره حساب : 0000000000</p>
+    <p>شماره كارت : 0000000000000000</p>
+    <p>به نام آقای</p>
+    <p>بانك ملت</p>
+    
+    <p class="js-cl">بستن پنجره</p>
+    
+  </div>
+  
+  </div>
+  
+<script>
+$('.js-sh-h-p').click(function(){
+  
+  $(".sh-h").show(1000);
+  
+});
+
+$('.js-cl').click(function(){
+                            
+	$(".sh-h").hide(1000);
+                                
+  
+});
+</script>
+</body>
+</html>
